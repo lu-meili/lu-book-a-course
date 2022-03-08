@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>lu-book-a-course</title>
+    <!-- bootstrap CSS-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <!-- bootstrap JS-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+</head>
+
+
+<style>
+    <link rel="preconnect"href="https://fonts.googleapis.com"><link rel="preconnect"href="https://fonts.gstatic.com"crossorigin><link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"rel="stylesheet">
+</style>
+
+
+<body>
+
+    <!--/*sticky top*/-->
+
+    <nav class="navbar sticky-top navbar-light bg-light">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Study Portuguese with Professora Núbia</a>
+        </div>
+
+    </nav>
+
+
+    <!--/*toggler // with a brand name shown on the left and toggler on the right // without search*/-->
+
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01"
+                aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+
+                    <li class="nav-item">
+                        <a class="nav-link href=" <a href="http://127.0.0.1:5500/index.html">Home</a>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+
+    <div class=".container p-5 my-0 border">
+
+        <div id="confirmation"></div>
+
+        <script>
+            const firstname = sessionStorage.getItem("firstname");
+            const email = sessionStorage.getItem("email");
+
+            const street = sessionStorage.getItem("street");
+            const streetnumber = sessionStorage.getItem("streetnumber");
+            const aptnumber = sessionStorage.getItem("aptnumber");
+            const zip = sessionStorage.getItem("zip");
+            const city = sessionStorage.getItem("city");
+            const state = sessionStorage.getItem("state");
+            const country = sessionStorage.getItem("country");
+
+            const when = sessionStorage.getItem("when");
+            const type = sessionStorage.getItem("type");
+
+
+            document.getElementById("confirmation").innerHTML =
+                `<h3>Thanks for registering!</h3><br>
+                    Full Name: ${firstname}<br>
+                    Email: ${email}<br>
+                    
+                    Street: ${street}<br>
+                    St. Number: ${streetnumber}<br>
+                    Ap. Number: ${aptnumber}<br>
+                    Zip Code: ${zip}<br>
+                    City: ${city}<br>
+                    State: ${state}<br>
+                    Country: ${country}<br><br>
+
+                    Prefered time of day: ${when}<br><br>
+                    Course type: ${type}<br>`;
+
+        </script>
+
+</body>
+
+</html>
